@@ -1,0 +1,1034 @@
+/* ==================================================
+   AFRICONNECT SUMMIT 2026
+   COMMIT 4 : Variables CSS, palette, typographie
+   et styles globaux
+ */
+/* page index */
+
+/* ================= VARIABLES CSS ================= */
+
+:root {
+
+    /* Couleurs principales */
+    --bleu-fonce: #0F172A;
+    --or: #D4AF37;
+
+    /* Couleurs générales */
+    --fond: #F8FAFC;
+    --blanc: #FFFFFF;
+    --texte: #1F2937;
+    --texte-clair: #6B7280;
+    --bordure: #E5E7EB;
+
+
+    /* Polices */
+    --titre: "Poppins", sans-serif;
+    --texte-police: "Open Sans", sans-serif;
+
+
+    /* Espacement */
+    --petit-espace: 10px;
+    --espace-normal: 20px;
+    --grand-espace: 50px;
+
+
+    /* Design */
+    --arrondi: 10px;
+    --ombre: 0 5px 15px rgba(0,0,0,0.10);
+
+}
+
+
+
+/* ================= GOOGLE FONTS ================= */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@500;600;700&display=swap');
+
+
+
+/* ================= RESET ================= */
+
+
+* {
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+
+}
+
+
+
+html {
+
+    scroll-behavior:smooth;
+
+}
+
+
+
+body {
+
+    font-family:var(--texte-police);
+    background-color:var(--fond);
+    color:var(--texte);
+    line-height:1.6;
+
+}
+
+
+
+img {
+
+    max-width:100%;
+
+}
+
+
+
+a {
+
+    text-decoration:none;
+    transition:0.3s;
+
+}
+
+
+
+ul {
+
+    list-style:none;
+
+}
+
+
+
+/* ================= TITRES ================= */
+
+
+h1,
+h2,
+h3 {
+
+    font-family:var(--titre);
+    color:var(--bleu-fonce);
+
+}
+
+
+
+h1 {
+
+    font-size:3rem;
+
+}
+
+
+
+h2 {
+
+    font-size:2rem;
+    margin-bottom:var(--espace-normal);
+
+}
+
+
+
+h3 {
+
+    font-size:1.4rem;
+
+}
+
+
+
+p {
+
+    color:var(--texte-clair);
+
+}
+
+
+
+/* ================= SECTIONS ================= */
+
+
+section {
+
+    padding:var(--grand-espace) var(--espace-normal);
+
+}
+
+
+
+/* ================= HEADER ================= */
+
+
+header {
+
+    background-color:var(--bleu-fonce);
+    padding:20px;
+
+}
+
+
+
+header h1 {
+
+    color:var(--or);
+    font-size:2rem;
+
+}
+
+
+
+/* ================= NAVIGATION ================= */
+
+
+nav a {
+
+    color:var(--blanc);
+    font-weight:bold;
+
+}
+
+
+
+nav a:hover {
+
+    color:var(--or);
+
+}
+
+
+
+/* ================= BOUTONS ================= */
+
+
+section a {
+
+    display:inline-block;
+    padding:12px 25px;
+    border-radius:var(--arrondi);
+    font-weight:bold;
+
+}
+
+
+
+#hero a:first-of-type,
+#inscription a {
+
+    background-color:var(--or);
+    color:var(--bleu-fonce);
+
+}
+
+
+
+#hero a:last-of-type {
+
+    background-color:var(--bleu-fonce);
+    color:var(--blanc);
+
+}
+
+
+
+/* ================= CARTES ================= */
+
+
+article,
+#statistiques div,
+details {
+
+    background-color:var(--blanc);
+    border:1px solid var(--bordure);
+    border-radius:var(--arrondi);
+    box-shadow:var(--ombre);
+    padding:var(--espace-normal);
+
+}
+
+
+
+/* ================= INFORMATIONS ================= */
+
+
+strong {
+
+    color:var(--bleu-fonce);
+
+}
+
+
+
+/* ================= FOOTER ================= */
+
+
+footer {
+
+    background-color:var(--bleu-fonce);
+    color:var(--blanc);
+    padding:var(--grand-espace);
+
+}
+
+
+
+footer section {
+
+    padding:var(--petit-espace);
+
+}
+
+
+
+footer h3 {
+
+    color:var(--or);
+
+}
+
+
+
+footer p,
+footer a {
+
+    color:var(--blanc);
+
+}
+
+
+
+footer a:hover {
+
+    color:var(--or);
+
+}
+
+
+
+footer hr {
+
+    border:none;
+    border-top:1px solid rgba(255,255,255,0.3);
+    margin:20px 0;
+
+}
+/* ==================================================
+   PAGE PROGRAMME
+   COMMIT 4 : Styles de base
+================================================== */
+
+
+/* ================= HERO PROGRAMME ================= */
+
+
+.hero-interne {
+
+    background-color:var(--bleu-fonce);
+    color:var(--blanc);
+
+}
+
+
+
+.hero-interne h1 {
+
+    color:var(--or);
+
+}
+
+
+
+.hero-interne p {
+
+    color:var(--blanc);
+
+}
+
+
+
+.hero-interne a {
+
+    color:var(--or);
+    font-weight:bold;
+
+}
+
+
+
+/* ================= OBJECTIFS ================= */
+
+
+.objectifs article {
+
+    background-color:var(--blanc);
+    border:1px solid var(--bordure);
+    border-radius:var(--arrondi);
+    box-shadow:var(--ombre);
+    padding:var(--espace-normal);
+
+}
+
+
+
+.objectifs h3 {
+
+    color:var(--bleu-fonce);
+
+}
+
+
+
+/* ================= BOUTONS JOUR ================= */
+
+
+.onglets-3 button {
+
+    background-color:var(--bleu-fonce);
+    color:var(--blanc);
+    padding:12px 20px;
+    border:none;
+    border-radius:var(--arrondi);
+    cursor:pointer;
+
+}
+
+
+
+.onglets-3 button:hover {
+
+    background-color:var(--or);
+    color:var(--bleu-fonce);
+
+}
+
+
+
+/* ================= TITRES PLANNING ================= */
+
+
+.onglets-3 h3 {
+
+    color:var(--bleu-fonce);
+    margin-top:var(--espace-normal);
+
+}
+
+
+
+/* ================= TABLEAUX PROGRAMME ================= */
+
+
+table {
+
+    width:100%;
+    border-collapse:collapse;
+    background-color:var(--blanc);
+
+}
+
+
+
+thead {
+
+    background-color:var(--bleu-fonce);
+    color:var(--blanc);
+
+}
+
+
+
+th {
+
+    padding:15px;
+    text-align:left;
+
+}
+
+
+
+td {
+
+    padding:15px;
+    border:1px solid var(--bordure);
+
+}
+
+
+
+tbody tr:hover {
+
+    background-color:#F8FAFC;
+
+}
+
+
+
+/* ================= ACTIVITES ================= */
+
+
+#Activite li {
+
+    color:var(--texte);
+    margin-bottom:var(--petit-espace);
+
+}
+
+
+
+/* ================= THEMATIQUES ================= */
+
+
+#thema-conf article {
+
+    background-color:var(--blanc);
+    border:1px solid var(--bordure);
+    border-radius:var(--arrondi);
+    box-shadow:var(--ombre);
+    padding:var(--espace-normal);
+
+}
+
+
+
+#thema-conf article div {
+
+    font-size:2rem;
+
+}
+
+
+
+#thema-conf h3 {
+
+    color:var(--bleu-fonce);
+
+}
+
+
+
+/* ================= PUBLIC ================= */
+
+
+#Public article {
+
+    background-color:var(--blanc);
+    border-radius:var(--arrondi);
+    padding:var(--espace-normal);
+    box-shadow:var(--ombre);
+
+}
+
+
+
+#Public h3 {
+
+    color:var(--or);
+
+}
+
+
+
+/* ================= FAQ ================= */
+
+
+#faq details {
+
+    background-color:var(--blanc);
+    border:1px solid var(--bordure);
+    border-radius:var(--arrondi);
+    padding:var(--petit-espace);
+    margin-bottom:var(--petit-espace);
+
+}
+
+
+
+#faq summary {
+
+    color:var(--bleu-fonce);
+    font-weight:bold;
+
+}
+
+
+
+#faq p {
+
+    margin-top:var(--petit-espace);
+
+}
+/* ==================================================
+   PAGE INTERVENANTS
+   COMMIT 4 : Styles de base
+================================================== */
+
+
+/* ================= HERO INTERVENANTS ================= */
+
+
+.hero {
+
+    background-color:var(--bleu-fonce);
+    color:var(--blanc);
+
+}
+
+
+
+.hero h1 {
+
+    color:var(--or);
+
+}
+
+
+
+/* Fil d'Ariane */
+
+
+.hero nav a {
+
+    color:var(--or);
+    background:none;
+    padding:0;
+    font-weight:bold;
+
+}
+
+
+
+/* ================= PRESENTATION ================= */
+
+
+section p {
+
+    color:var(--texte-clair);
+
+}
+
+
+
+/* ================= FILTRES ================= */
+
+
+.filtres-container button {
+
+    background-color:var(--bleu-fonce);
+    color:var(--blanc);
+    border:none;
+    padding:12px 20px;
+    border-radius:var(--arrondi);
+    font-weight:bold;
+    cursor:pointer;
+
+}
+
+
+
+.filtres-container button:hover {
+
+    background-color:var(--or);
+    color:var(--bleu-fonce);
+
+}
+
+
+
+/* ================= CARTES INTERVENANTS ================= */
+
+
+.grille-intervenants article {
+
+    background-color:var(--blanc);
+    border:1px solid var(--bordure);
+    border-radius:var(--arrondi);
+    box-shadow:var(--ombre);
+    padding:var(--espace-normal);
+
+}
+
+
+
+.grille-intervenants h3 {
+
+    color:var(--bleu-fonce);
+
+}
+
+
+
+.grille-intervenants strong {
+
+    color:var(--or);
+
+}
+
+
+
+/* ================= PHOTO INTERVENANT ================= */
+
+
+.photo {
+
+    width:150px;
+    height:150px;
+    border-radius:50%;
+    background-color:#E5E7EB;
+    margin-bottom:var(--petit-espace);
+
+}
+
+
+
+/* ================= DOMAINES ================= */
+
+
+section li {
+
+    color:var(--texte);
+    margin-bottom:var(--petit-espace);
+
+}
+
+
+
+/* ================= POURQUOI ASSISTER ================= */
+
+
+section article {
+
+    background-color:var(--blanc);
+    border-radius:var(--arrondi);
+    box-shadow:var(--ombre);
+    padding:var(--espace-normal);
+
+}
+
+
+
+section article h3 {
+
+    color:var(--bleu-fonce);
+
+}
+
+
+
+/* ================= CITATION ================= */
+
+
+blockquote {
+
+    background-color:var(--bleu-fonce);
+    color:var(--blanc);
+    padding:var(--espace-normal);
+    border-radius:var(--arrondi);
+    font-size:1.2rem;
+    font-style:italic;
+
+}
+
+
+
+blockquote + p {
+
+    color:var(--or);
+    font-weight:bold;
+
+}
+
+
+
+/* ================= BOUTON RESERVER ================= */
+
+
+section a[href="contact.html"] {
+
+    background-color:var(--or);
+    color:var(--bleu-fonce);
+    font-weight:bold;
+    padding:12px 25px;
+    border-radius:var(--arrondi);
+
+}
+
+
+
+section a[href="contact.html"]:hover {
+
+    background-color:var(--bleu-fonce);
+    color:var(--blanc);
+
+}
+/* ==================================================
+   PAGE CONTACT
+   COMMIT 4 : Styles de base
+================================================== */
+
+
+/* ================= HERO CONTACT ================= */
+
+
+.hero {
+
+    background-color:var(--bleu-fonce);
+    color:var(--blanc);
+
+}
+
+
+
+.hero h1 {
+
+    color:var(--or);
+
+}
+
+
+
+.hero nav a {
+
+    color:var(--or);
+    background:none;
+    padding:0;
+    font-weight:bold;
+
+}
+
+
+
+.hero p {
+
+    color:var(--blanc);
+
+}
+
+
+
+/* ================= FORMULAIRE ================= */
+
+
+.contact-inscription {
+
+    background-color:var(--fond);
+
+}
+
+
+
+.formulaire {
+
+    background-color:var(--blanc);
+    padding:var(--espace-normal);
+    border-radius:var(--arrondi);
+    box-shadow:var(--ombre);
+
+}
+
+
+
+.formulaire h2 {
+
+    color:var(--bleu-fonce);
+
+}
+
+
+
+/* ================= CHAMPS DU FORMULAIRE ================= */
+
+
+.formulaire div {
+
+    margin-bottom:var(--petit-espace);
+
+}
+
+
+
+.formulaire label {
+
+    display:block;
+    margin-bottom:8px;
+    font-weight:bold;
+    color:var(--bleu-fonce);
+
+}
+
+
+
+.formulaire input,
+.formulaire select,
+.formulaire textarea {
+
+    width:100%;
+    padding:12px;
+    border:1px solid var(--bordure);
+    border-radius:var(--arrondi);
+    font-family:var(--texte-police);
+    font-size:1rem;
+
+}
+
+
+
+.formulaire input:focus,
+.formulaire select:focus,
+.formulaire textarea:focus {
+
+    outline:none;
+    border-color:var(--or);
+
+}
+
+
+
+/* ================= MESSAGE MOTIVATION ================= */
+
+
+#message {
+
+    resize:vertical;
+
+}
+
+
+
+/* ================= CHECKBOX ================= */
+
+
+input[type="checkbox"] {
+
+    width:auto;
+
+}
+
+
+
+.formulaire label[for="conditions"] {
+
+    display:inline;
+    margin-left:8px;
+
+}
+
+
+
+/* ================= BOUTON FORMULAIRE ================= */
+
+
+.formulaire button {
+
+    background-color:var(--or);
+    color:var(--bleu-fonce);
+    padding:12px 30px;
+    border-radius:var(--arrondi);
+    border:none;
+    font-weight:bold;
+    cursor:pointer;
+
+}
+
+
+
+.formulaire button:hover {
+
+    background-color:var(--bleu-fonce);
+    color:var(--blanc);
+
+}
+
+
+
+/* ================= INFORMATIONS CONTACT ================= */
+
+
+.infos-contact {
+
+    background-color:var(--blanc);
+    padding:var(--espace-normal);
+    border-radius:var(--arrondi);
+    box-shadow:var(--ombre);
+
+}
+
+
+
+.infos-contact h2 {
+
+    color:var(--or);
+
+}
+
+
+
+.infos-contact strong {
+
+    color:var(--bleu-fonce);
+
+}
+
+
+
+/* ================= POURQUOI PARTICIPER ================= */
+
+
+section article {
+
+    background-color:var(--blanc);
+    padding:var(--espace-normal);
+    border-radius:var(--arrondi);
+    box-shadow:var(--ombre);
+
+}
+
+
+
+section article h3 {
+
+    color:var(--bleu-fonce);
+
+}
+
+
+
+/* ================= FAQ ================= */
+
+
+.faq div {
+
+    background-color:var(--blanc);
+    border:1px solid var(--bordure);
+    padding:var(--espace-normal);
+    border-radius:var(--arrondi);
+    margin-bottom:var(--petit-espace);
+
+}
+
+
+
+.faq h3 {
+
+    color:var(--bleu-fonce);
+
+}
+
+
+
+/* ================= LOCALISATION ================= */
+
+
+.localisation iframe {
+
+    width:100%;
+    height:350px;
+    border:0;
+    border-radius:var(--arrondi);
+
+}
+

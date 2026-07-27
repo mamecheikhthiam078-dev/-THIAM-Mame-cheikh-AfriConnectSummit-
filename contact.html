@@ -35,6 +35,10 @@
             </ul>
 
         </nav>
+            <!-- ================= BOUTON MODE SOMBRE ================= -->
+
+            <button id="themeToggle">🌙</button>
+            <button id="menuToggle">☰</button>
 
     </header>
 
@@ -69,15 +73,15 @@
                 <form>
 
                     <!-- Champ Nom -->
-                    <div>
+                    <div class="form-group">
                         <label for="nom">Nom complet</label>
-                        <input type="text" id="nom" name="nom">
+                        <input type="text" id="nom" name="nom" required>
                     </div>
 
                     <!-- Champ Email -->
-                    <div>
+                    <div class="form-group">
                         <label for="email">Email</label>
-                        <input type="email" id="email" name="email">
+                        <input type="email" id="email" name="email" required>
                     </div>
 
                     <!-- Champ Téléphone -->
@@ -130,7 +134,7 @@
                         </select>
                     </div>
 
-                    <<!-- Champ Message -->
+                    <!-- Champ Message -->
                 <div>
                     <label for="message">Message / Motivation</label>
                     <textarea
@@ -142,12 +146,12 @@
                     </textarea>
                 </div>
 
-                        <input type="checkbox" id="conditions">
-
+                        <!-- Case à cocher -->
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" id="conditions" name="conditions" required>
                         <label for="conditions">
                             J'accepte les conditions de participation.
                         </label>
-
                     </div>
                     <!-- Bouton d'envoi -->
                     <button type="submit">
@@ -175,8 +179,6 @@
 
             </aside>
         </section>
-        <section>
-
         <section>
 
             <h2>Pourquoi participer ?</h2>
@@ -265,7 +267,7 @@
         </section>
 
     </main>
-
+    <button id="backToTop">↑</button>
         <!-- ================= FOOTER ================= -->
 <footer>
 
@@ -322,6 +324,5 @@
 
     <!-- ================= SCRIPT JAVASCRIPT ================= -->
     <script src="js/main.js"></script>
-
 </body>
 </html>

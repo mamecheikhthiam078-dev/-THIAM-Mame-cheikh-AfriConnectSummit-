@@ -1076,6 +1076,14 @@ header{
     justify-content:space-between;
     align-items:center;
     flex-wrap:wrap;
+    transition:0.3s;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:1000;
+    background-color:var(--bleu-fonce);
+    transition:0.3s ease;
 }
 
 nav ul{
@@ -1257,10 +1265,9 @@ details{
 /* ================= MOBILE ================= */
 
 @media(max-width:768px){
-
     header{
-        flex-direction:column;
-        text-align:center;
+        justify-content:space-between;
+        align-items:center;
     }
 
     nav ul{
@@ -1358,13 +1365,7 @@ details{
 }
 
 
-/* ================= TABLEAU ================= */
-
-table{
-
-    overflow-x:auto;
-
-}
+/* ================= TABLEAU ================= 
 
 
 /* ================= ACTIVITES ================= */
@@ -1491,48 +1492,49 @@ article:hover{
 
 
 /* ================= MOBILE ================= */
+@media(max-width:768px){
 
-@media (max-width:768px){
+    #menuToggle{
+        display:block;
+    }
 
-    header{
+    nav{
+        display:none;
+        width:100%;
+        order:3;
+    }
 
-        flex-direction:column;
-        text-align:center;
-
+    nav.active{
+        display:block;
     }
 
     nav ul{
-
+        display:flex;
         flex-direction:column;
         align-items:center;
-
+        gap:20px;
     }
 
-    .objectifs{
+    header{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:20px;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    background:var(--bleu-fonce);
+    z-index:1000;
+}
+nav{
+    margin-left:auto;
+    margin-right:20px;
+}
 
-        flex-direction:column;
-
-    }
-
-    #Public{
-
-        flex-direction:column;
-
-    }
-
-    #thema-conf > div{
-
-        grid-template-columns:1fr;
-
-    }
-
-    footer{
-
-        flex-direction:column;
-        text-align:center;
-
-    }
-
+#themeToggle{
+    margin-left:0;
+}
 }
 
 /* ==================================================
@@ -1553,18 +1555,6 @@ article:hover{
     width:60px;
 
 }
-
-
-
-/* ================= HERO ================= */
-
-.hero{
-
-    text-align:center;
-
-}
-
-
 /* ================= PRESENTATION ================= */
 
 main section:nth-of-type(2){
@@ -1770,13 +1760,6 @@ footer section{
 ================================================== */
 /* page contact */
 
-/* ================= HERO ================= */
-
-.hero{
-    text-align:center;
-}
-
-
 /* ================= FORMULAIRE + INFOS ================= */
 
 .contact-inscription{
@@ -1871,12 +1854,6 @@ main section:nth-of-type(3) article:hover{
     transform:translateY(-8px);
 
 }
-
-.hero{
-
-    animation:apparition 1s ease;
-
-}
 /* ================= TABLETTE ================= */
 
 @media(max-width:992px){
@@ -1913,7 +1890,6 @@ main section:nth-of-type(3) article:hover{
     main section:nth-of-type(3){
 
         flex-direction:column;
-
     }
 
     .faq{
@@ -1925,7 +1901,263 @@ main section:nth-of-type(3) article:hover{
     .hero{
 
         padding:40px 20px;
+        text-align:center;
+         animation:apparition 1s ease;
 
+    }
+
+}
+/* ==================================================
+   COMMIT 6
+   BACK TO TOP
+================================================== */
+
+#backToTop{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    width:50px;
+    height:50px;
+    border:none;
+    border-radius:50%;
+    background-color:var(--or);
+    color:var(--bleu-fonce);
+    font-size:22px;
+    cursor:pointer;
+    display:none;
+    box-shadow:var(--ombre);
+    transition:0.3s;
+    z-index:999;
+}
+
+#backToTop:hover{
+    transform:scale(1.1);
+}
+/* ==================================================
+   COMMIT 6
+   DARK MODE
+================================================== */
+
+#themeToggle{
+    padding:10px 15px;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    background:var(--or);
+    color:var(--bleu-fonce);
+    font-weight:bold;
+}
+
+body.dark-mode{
+    background:#111827;
+    color:white;
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3{
+    color:#D4AF37;
+}
+
+body.dark-mode p{
+    color:#d1d5db;
+}
+
+body.dark-mode article,
+body.dark-mode details,
+body.dark-mode .formulaire,
+body.dark-mode .infos-contact{
+    background:#1f2937;
+    border-color:#374151;
+}
+/* ==================================================
+   COMMIT 6
+   NAVBAR
+================================================== */
+header.scroll{
+    background:#08111f;
+    box-shadow:0 5px 15px rgba(0,0,0,.25);
+}
+/* ==================================================
+   COMMIT 6
+   MODE SOMBRE COMPLET
+================================================== */
+/* ================= TITRES ================= */
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3{
+    color:#D4AF37;
+}
+
+/* ================= TEXTES ================= */
+
+body.dark-mode p,
+body.dark-mode li,
+body.dark-mode td,
+body.dark-mode label,
+body.dark-mode strong{
+    color:#F9FAFB;
+}
+
+/* ================= HEADER ================= */
+
+body.dark-mode header{
+    background-color:#0B1120;
+}
+
+/* ================= CARTES ================= */
+
+body.dark-mode article,
+body.dark-mode details,
+body.dark-mode .formulaire,
+body.dark-mode .infos-contact,
+body.dark-mode .faq div{
+    background-color:#1F2937;
+    border:1px solid #374151;
+}
+
+/* ================= TABLEAUX ================= */
+
+body.dark-mode table{
+    background-color:#1F2937;
+    color:#F9FAFB;
+}
+
+body.dark-mode thead{
+    background-color:#0B1120;
+}
+
+body.dark-mode th{
+    color:#D4AF37;
+}
+
+body.dark-mode td{
+    background-color:#1F2937;
+    border:1px solid #374151;
+}
+
+body.dark-mode tbody tr:hover{
+    background-color:#374151;
+}
+
+/* ================= FORMULAIRES ================= */
+
+body.dark-mode input,
+body.dark-mode textarea,
+body.dark-mode select{
+    background-color:#111827;
+    color:#F9FAFB;
+    border:1px solid #374151;
+}
+
+body.dark-mode input::placeholder,
+body.dark-mode textarea::placeholder{
+    color:#9CA3AF;
+}
+
+/* ================= FAQ ================= */
+
+body.dark-mode summary{
+    color:#D4AF37;
+}
+
+/* ================= FOOTER ================= */
+
+body.dark-mode footer{
+    background-color:#0B1120;
+}
+
+body.dark-mode footer p,
+body.dark-mode footer a{
+    color:#F9FAFB;
+}
+
+body.dark-mode footer a:hover{
+    color:#D4AF37;
+}
+
+/* ================= BOUTONS ================= */
+
+body.dark-mode button,
+body.dark-mode #themeToggle{
+    background-color:#D4AF37;
+    color:#0F172A;
+}
+
+body.dark-mode button:hover,
+body.dark-mode #themeToggle:hover{
+    background-color:#FACC15;
+}
+
+/* ================= LIENS ================= */
+
+body.dark-mode a{
+    color:#D4AF37;
+}
+
+body.dark-mode a:hover{
+    color:#FACC15;
+}
+
+/* ================= HERO ================= */
+
+body.dark-mode .hero,
+body.dark-mode .hero-interne{
+    background-color:#0B1120;
+}
+
+/* ================= ANIMATIONS ================= */
+
+body,
+header,
+article,
+table,
+td,
+th,
+input,
+textarea,
+select,
+footer{
+    transition:0.3s ease;
+}
+/* ==================================================
+   COMMIT 6
+   NAVBAR FIXE
+================================================== */
+body{
+    padding-top:100px;
+}
+/* ================= MENU HAMBURGER ================= */
+
+#menuToggle{
+    display:none;
+    background:none;
+    border:none;
+    font-size:30px;
+    color:var(--blanc);
+    cursor:pointer;
+}
+
+@media(max-width:768px){
+
+    #menuToggle{
+        display:block;
+    }
+
+    nav{
+        display:none;
+        width:100%;
+    }
+
+    nav.active{
+        display:block;
+    }
+
+    nav ul{
+        flex-direction:column;
+        align-items:center;
+        gap:20px;
     }
 
 }

@@ -1032,3 +1032,900 @@ section article h3 {
 
 }
 
+
+
+/* ================= LOGO ================= */
+
+.logo{
+
+    display:flex;
+    align-items:center;
+    gap:15px;
+
+}
+
+.logo img{
+
+    width:60px;
+    height:60px;
+
+}
+
+.logo h1{
+
+    font-size:28px;
+    color:#D4AF37;
+
+}
+
+
+
+
+
+
+/* ==================================================
+   COMMIT 5
+   Responsive - Flexbox - Grid - Animations
+================================================== */
+/* page index */
+
+/* ================= HEADER ================= */
+
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+}
+
+nav ul{
+    display:flex;
+    gap:20px;
+}
+
+
+/* ================= ALIGNEMENT ================= */
+
+section{
+    text-align:center;
+}
+
+section h2{
+    margin-bottom:20px;
+}
+
+section p{
+    margin-bottom:15px;
+}
+
+section ul{
+    list-style-position:inside;
+}
+
+section li{
+    margin-bottom:10px;
+}
+
+
+/* ================= POURQUOI PARTICIPER ================= */
+
+#pourquoi{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+#pourquoi article{
+    width:250px;
+}
+
+
+/* ================= STATISTIQUES ================= */
+
+#statistiques{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+#statistiques div{
+    text-align:center;
+}
+
+
+/* ================= INTERVENANTS ================= */
+
+#intervenants-vedettes{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+#intervenants-vedettes h2{
+    grid-column:1/4;
+}
+
+#intervenants-vedettes article{
+    text-align:center;
+}
+
+#intervenants-vedettes img{
+    width:160px;
+    height:160px;
+    border-radius:50%;
+    object-fit:cover;
+    margin:0 auto 15px;
+}
+
+
+/* ================= PARTENAIRES ================= */
+
+#partenaires ul{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+
+/* ================= FOOTER ================= */
+
+footer{
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:20px;
+}
+
+footer section{
+    flex:1;
+}
+
+
+/* ================= ANIMATION ================= */
+
+article,
+#statistiques div{
+    transition:0.3s;
+}
+
+article:hover,
+#statistiques div:hover{
+    transform:translateY(-8px);
+}
+
+#hero{
+    animation:apparition 1s;
+}
+
+@keyframes apparition{
+
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+
+/* ================= FAQ ================= */
+
+details{
+    max-width:700px;
+    margin:15px auto;
+    text-align:left;
+}
+
+
+/* ================= BOUTONS ================= */
+
+#hero a{
+    margin:10px;
+}
+
+#inscription a{
+    display:inline-block;
+    margin-top:20px;
+}
+
+
+/* ================= TABLETTE ================= */
+
+@media(max-width:992px){
+
+    #statistiques{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    #intervenants-vedettes{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    #intervenants-vedettes h2{
+        grid-column:1/3;
+    }
+
+}
+
+
+/* ================= MOBILE ================= */
+
+@media(max-width:768px){
+
+    header{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    nav ul{
+        flex-direction:column;
+    }
+
+    #statistiques,
+    #intervenants-vedettes{
+        grid-template-columns:1fr;
+    }
+
+    #intervenants-vedettes h2{
+        grid-column:1;
+    }
+
+    footer{
+        flex-direction:column;
+        text-align:center;
+    }
+
+}
+/* ==================================================
+   COMMIT 5
+   Responsive - Flexbox - Grid - Animations
+================================================== */
+/* page progammation */
+
+/* ================= HEADER ================= */
+
+
+.logo img{
+
+    width:60px;
+
+}
+
+
+/* ================= NAVBAR ================= */
+
+
+
+
+/* ================= HERO ================= */
+
+.hero-interne{
+
+    text-align:center;
+
+}
+
+
+/* ================= OBJECTIFS ================= */
+
+.objectifs{
+
+    display:flex;
+    gap:20px;
+    justify-content:center;
+    flex-wrap:wrap;
+    text-align:center;
+
+}
+
+.objectifs h2{
+
+    width:100%;
+    margin-bottom:25px;
+
+}
+
+.objectifs article{
+
+    flex:1;
+    min-width:250px;
+
+}
+
+
+/* ================= BOUTONS DES JOURS ================= */
+
+.onglets-3{
+
+    text-align:center;
+
+}
+
+.onglets-3 div:first-of-type{
+
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+    margin-bottom:30px;
+
+}
+
+
+/* ================= TABLEAU ================= */
+
+table{
+
+    overflow-x:auto;
+
+}
+
+
+/* ================= ACTIVITES ================= */
+
+#Activite{
+
+    text-align:center;
+
+}
+
+#Activite ul{
+
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+
+}
+
+
+/* ================= THEMATIQUES ================= */
+
+#thema-conf{
+
+    text-align:center;
+
+}
+
+#thema-conf > div{
+
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+
+}
+
+
+/* ================= PUBLIC ================= */
+
+#Public{
+
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+    text-align:center;
+
+}
+
+#Public h2{
+
+    width:100%;
+    margin-bottom:25px;
+
+}
+
+#Public article{
+
+    flex:1;
+    min-width:250px;
+
+}
+
+
+/* ================= FAQ ================= */
+
+#faq{
+
+    text-align:center;
+
+}
+
+#faq details{
+
+    margin-bottom:15px;
+
+}
+
+
+/* ================= FOOTER ================= */
+
+
+footer section{
+
+    flex:1;
+    min-width:220px;
+
+}
+
+
+/* ================= ANIMATION ================= */
+
+article{
+
+    transition:0.3s;
+
+}
+
+article:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.hero-interne{
+
+    animation:apparition 1s;
+
+}
+
+
+
+/* ================= TABLETTE ================= */
+
+@media (max-width:992px){
+
+    #thema-conf > div{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width:768px){
+
+    header{
+
+        flex-direction:column;
+        text-align:center;
+
+    }
+
+    nav ul{
+
+        flex-direction:column;
+        align-items:center;
+
+    }
+
+    .objectifs{
+
+        flex-direction:column;
+
+    }
+
+    #Public{
+
+        flex-direction:column;
+
+    }
+
+    #thema-conf > div{
+
+        grid-template-columns:1fr;
+
+    }
+
+    footer{
+
+        flex-direction:column;
+        text-align:center;
+
+    }
+
+}
+
+/* ==================================================
+   COMMIT 5
+   PAGE INTERVENANTS
+   Responsive - Flexbox - Grid - Animations
+================================================== */
+/* page intervenants */
+
+/* ================= HEADER ================= */
+
+
+
+
+
+.logo img{
+
+    width:60px;
+
+}
+
+
+
+/* ================= HERO ================= */
+
+.hero{
+
+    text-align:center;
+
+}
+
+
+/* ================= PRESENTATION ================= */
+
+main section:nth-of-type(2){
+
+    text-align:center;
+
+}
+
+
+/* ================= FILTRES ================= */
+
+.filtres{
+
+    text-align:center;
+
+}
+
+.filtres-container{
+
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+
+}
+
+
+/* ================= GRILLE INTERVENANTS ================= */
+
+.intervenants{
+
+    text-align:center;
+
+}
+
+.grille-intervenants{
+
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+
+}
+
+.grille-intervenants article{
+
+    transition:0.3s;
+
+}
+
+.grille-intervenants article:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.photo{
+
+    margin:0 auto 15px;
+
+}
+
+
+/* ================= DOMAINES ================= */
+
+main section:nth-of-type(5){
+
+    text-align:center;
+
+}
+
+main section:nth-of-type(5) ul{
+
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+
+}
+
+
+/* ================= POURQUOI ASSISTER ================= */
+
+main section:nth-of-type(6){
+
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+    text-align:center;
+
+}
+
+main section:nth-of-type(6) h2{
+
+    width:100%;
+    margin-bottom:20px;
+
+}
+
+main section:nth-of-type(6) article{
+
+    flex:1;
+    min-width:220px;
+
+}
+
+
+/* ================= CITATION ================= */
+
+main section:nth-of-type(7){
+
+    text-align:center;
+
+}
+
+
+/* ================= CTA ================= */
+
+main section:last-of-type{
+
+    text-align:center;
+
+}
+
+
+/* ================= FOOTER ================= */
+
+
+footer section{
+
+    flex:1;
+    min-width:220px;
+
+}
+
+
+/* ================= ANIMATION ================= */
+
+.hero{
+
+    animation:apparition 1s;
+
+}
+
+
+
+/* ================= TABLETTE ================= */
+
+@media(max-width:992px){
+
+    .grille-intervenants{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+
+/* ================= MOBILE ================= */
+
+@media(max-width:768px){
+
+    header{
+
+        flex-direction:column;
+        text-align:center;
+
+    }
+
+    nav ul{
+
+        flex-direction:column;
+        align-items:center;
+
+    }
+
+    .grille-intervenants{
+
+        grid-template-columns:1fr;
+
+    }
+
+    main section:nth-of-type(6){
+
+        flex-direction:column;
+
+    }
+
+    footer{
+
+        flex-direction:column;
+        text-align:center;
+
+    }
+
+}
+
+/* ==================================================
+   COMMIT 5
+   PAGE CONTACT
+   Responsive - Flexbox - Animations
+================================================== */
+/* page contact */
+
+/* ================= HERO ================= */
+
+.hero{
+    text-align:center;
+}
+
+
+/* ================= FORMULAIRE + INFOS ================= */
+
+.contact-inscription{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    gap:30px;
+    flex-wrap:wrap;
+
+}
+
+.formulaire{
+
+    flex:2;
+
+}
+
+.infos-contact{
+
+    flex:1;
+
+}
+
+
+/* ================= POURQUOI PARTICIPER ================= */
+
+main section:nth-of-type(3){
+
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+    text-align:center;
+
+}
+
+main section:nth-of-type(3) h2{
+
+    width:100%;
+    text-align:center;
+    margin-bottom:30px;
+
+}
+
+main section:nth-of-type(3) article{
+
+    flex:1;
+    min-width:250px;
+
+}
+/* ================= FAQ ================= */
+
+.faq{
+
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+
+}
+
+.faq h2{
+
+    grid-column:1/3;
+    text-align:center;
+
+}
+/* ================= GOOGLE MAP ================= */
+.localisation h2{
+
+    text-align:center;
+
+}
+
+
+/* ================= ANIMATIONS ================= */
+
+.formulaire,
+.infos-contact,
+.faq div,
+main section:nth-of-type(3) article{
+
+    transition:0.3s;
+
+}
+
+.formulaire:hover,
+.infos-contact:hover,
+.faq div:hover,
+main section:nth-of-type(3) article:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.hero{
+
+    animation:apparition 1s ease;
+
+}
+/* ================= TABLETTE ================= */
+
+@media(max-width:992px){
+
+    .contact-inscription{
+
+        flex-direction:column;
+
+    }
+
+    .faq{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .faq h2{
+
+        grid-column:1;
+
+    }
+
+}
+/* ================= MOBILE ================= */
+
+@media(max-width:768px){
+
+    .contact-inscription{
+
+        flex-direction:column;
+
+    }
+
+    main section:nth-of-type(3){
+
+        flex-direction:column;
+
+    }
+
+    .faq{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .hero{
+
+        padding:40px 20px;
+
+    }
+
+}

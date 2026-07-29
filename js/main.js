@@ -242,3 +242,89 @@ boutonsJour.forEach((bouton) => {
     });
 
 });
+/* ==================================================
+   COMMIT 8 - Validation du formulaire
+================================================== */
+
+const form = document.querySelector("form");
+
+if (form) {
+
+    form.addEventListener("submit", function(e){
+
+        e.preventDefault();
+
+        const nom = document.getElementById("nom");
+        const email = document.getElementById("email");
+        const telephone = document.getElementById("telephone");
+        const participation = document.getElementById("participation");
+        const pays = document.getElementById("pays");
+        const message = document.getElementById("message");
+
+        let valide = true;
+
+        // Réinitialisation
+        document.querySelectorAll("input, select, textarea").forEach(champ=>{
+            champ.style.border = "1px solid #ccc";
+        });
+
+        // Nom
+        if(nom.value.trim() === ""){
+            nom.style.border = "2px solid red";
+            valide = false;
+        }else{
+            nom.style.border = "2px solid green";
+        }
+
+        // Email
+        const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        if(!regexEmail.test(email.value)){
+            email.style.border = "2px solid red";
+            valide = false;
+        }else{
+            email.style.border = "2px solid green";
+        }
+
+        // Téléphone
+        if(telephone.value.replace(/\D/g,"").length < 8){
+            telephone.style.border = "2px solid red";
+            valide = false;
+        }else{
+            telephone.style.border = "2px solid green";
+        }
+
+        // Participation
+        if(participation.value === ""){
+            participation.style.border = "2px solid red";
+            valide = false;
+        }else{
+            participation.style.border = "2px solid green";
+        }
+
+        // Pays
+        if(pays.value === ""){
+            pays.style.border = "2px solid red";
+            valide = false;
+        }else{
+            pays.style.border = "2px solid green";
+        }
+
+        // Message
+        if(message.value.trim().length < 20){
+            message.style.border = "2px solid red";
+            valide = false;
+        }else{
+            message.style.border = "2px solid green";
+        }
+
+        if(valide){
+            alert("✅ Inscription envoyée avec succès !");
+            form.reset();
+        }else{
+            alert("❌ Veuillez remplir correctement tous les champs.");
+        }
+
+    });
+
+}

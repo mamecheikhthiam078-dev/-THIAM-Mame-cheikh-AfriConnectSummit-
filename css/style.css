@@ -1203,9 +1203,6 @@ article:hover,
     transform:translateY(-8px);
 }
 
-#hero{
-    animation:apparition 1s;
-}
 
 @keyframes apparition{
 
@@ -2160,4 +2157,75 @@ body{
         gap:20px;
     }
 
+}
+/* ==================================================
+   COMMIT 7
+   COMPTE A REBOURS
+================================================== */
+
+#countdown{
+
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    margin-top:30px;
+    flex-wrap:wrap;
+
+}
+
+#countdown div{
+
+    background:white;
+    padding:15px;
+    border-radius:10px;
+    min-width:90px;
+    box-shadow:var(--ombre);
+
+}
+
+#countdown span{
+
+    font-size:2rem;
+    font-weight:bold;
+    color:var(--or);
+
+}
+/* ==================================================
+   COMMIT 7
+   ANIMATIONS AU SCROLL
+================================================== */
+
+section{
+
+    opacity:0;
+    transform:translateY(40px);
+    transition:opacity 0.8s ease, transform 0.8s ease;
+
+}
+
+section.visible{
+
+    opacity:1;
+    transform:translateY(0);
+
+}
+/* ==================================================
+   COMMIT 7
+   ONGLETS PROGRAMME
+================================================== */
+
+#planning-jour1,
+#planning-jour2,
+#planning-jour3{
+    display:none;
+}
+
+#planning-jour1.active,
+#planning-jour2.active,
+#planning-jour3.active{
+    display:block;
+}
+.filtres-container button.actif{
+    background-color: var(--or);
+    color: var(--bleu-fonce);
 }
